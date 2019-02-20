@@ -13,7 +13,8 @@ public class Main {
         algorytmy.ciagArytmetyczny(3.0, 2, 7);
         System.out.println("Liczba doskonała " + algorytmy.czyLiczbaDoskonala(6));
         System.out.println("NWD " + algorytmy.getNWD(38, 12));
-        System.out.println("NWD " + algorytmy.konwerterBin(15));
+        System.out.println("Dec to bin " + algorytmy.konwerterBin(15));
+        System.out.println("bin to dec " + algorytmy.konwerterBinToDec("100"));
 
     }
 }

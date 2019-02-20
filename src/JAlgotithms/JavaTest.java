@@ -86,8 +86,17 @@ public class JavaTest {
         //odwrócenie liczby
         StringBuffer sb=new StringBuffer(binary);
         return sb.reverse().toString();
-        //można w skrócie
+        //można w skrócie:
         //return new StringBuffer(binary).reverse().toString();
 
+    }
+
+    public int konwerterBinToDec(String binary){
+        int decimal=0;
+        for(int i=0; i<binary.length(); i++){
+            decimal=decimal+(((int)binary.charAt(i)-48)*potegowanie(2,(binary.length()-1)-i));
+
+        }
+        return decimal;
     }
 }
