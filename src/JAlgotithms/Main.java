@@ -15,6 +15,9 @@ public class Main {
         System.out.println("NWD " + algorytmy.getNWD(38, 12));
         System.out.println("Dec to bin " + algorytmy.konwerterBin(15));
         System.out.println("bin to dec " + algorytmy.konwerterBinToDec("100"));
+        System.out.println("Czy to liczba pierwsza " + algorytmy.isPrimary(8));
+        System.out.println("Liczby pierwsze: ");
+        algorytmy.getPrimaryNumbers(100000);
 
     }
 }

@@ -66,9 +66,9 @@ public class JavaTest {
         //2. iterujemy w pętli i sprawdzamy czy dzielnik less
         //jest dzielnikiem greater
         for (int i = less;
-        less > 1;
-        i--){
-            if( less % i == 0 && greater % 1 == 0){
+             less > 1;
+             i--) {
+            if (less % i == 0 && greater % 1 == 0) {
                 return i;
             }
         }
@@ -76,27 +76,83 @@ public class JavaTest {
 
     }
 
-    public String konwerterBin (int liczba){
+    public String konwerterBin(int liczba) {
         int liczbaPom;
-        String binary="";
-        while (liczba>=1){
-            binary=binary.concat(String.valueOf(liczba%2));
-            liczba=liczba/2;
+        String binary = "";
+        while (liczba >= 1) {
+            binary = binary.concat(String.valueOf(liczba % 2));
+            liczba = liczba / 2;
         }
         //odwrócenie liczby
-        StringBuffer sb=new StringBuffer(binary);
+        StringBuffer sb = new StringBuffer(binary);
         return sb.reverse().toString();
         //można w skrócie:
         //return new StringBuffer(binary).reverse().toString();
 
     }
 
-    public int konwerterBinToDec(String binary){
-        int decimal=0;
-        for(int i=0; i<binary.length(); i++){
-            decimal=decimal+(((int)binary.charAt(i)-48)*potegowanie(2,(binary.length()-1)-i));
+    public int konwerterBinToDec(String binary) {
+        int decimal = 0;
+        for (int i = 0; i < binary.length(); i++) {
+            decimal = decimal + (((int) binary.charAt(i) - 48) * potegowanie(2, (binary.length() - 1) - i));
 
         }
         return decimal;
     }
+
+    public boolean isPrimary(int number) {
+        int licznik = 0;
+
+        //1 inicjalizacja licznika podzielników
+        for (int i = 2; i < number; i++)
+        {
+            if (number % i == 0) {
+                licznik++;
+            }
+
+        }
+        if (licznik == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void getPrimaryNumbers(int n){
+        int primaryNumberCounter=0;
+        int i = 2;
+        while (primaryNumberCounter< n){
+            if (isPrimary(i)){
+                primaryNumberCounter++;
+                System.out.print(i+ " ");
+
+            }
+            i++;
+        }
+    }
+//    public void getPrimaryNumbersRecurs(int n){
+//        int primaryNumberCounter=0;
+//        int i = 2;
+//        while (primaryNumberCounter< n){
+//            if (isPrimary(i)){
+//                primaryNumberCounter++;
+//                System.out.print(i+ " ");
+//
+//            }
+//            i++;
+//        }
+//    } napisać wyszukiwanie rekurencyjne liczby pierwszej w domu
 }
+
+
+
+
+
+//w pęti for zliczamy liczby naturalne do liczby number
+    //każdorazwowo sprawdzając czy te liczby są dzielnikami number
+    //TAK - licznik++
+    //NIE - nic
+
+    //3. Zwracamy true jeżeli licznik =0; FALSE licznik>0
+
+
