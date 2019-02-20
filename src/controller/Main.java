@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Pole powierzchni kwadratu: " + mySquare.calculateField(1.82));
         System.out.println("Pole powierzchni prostokąta: " + myRectangle.calculateField(1.28, 5.5));
         System.out.println("Pole powierzchni rombu: " + myDiamond.calculateField(1.88, 5.5));
-        System.out.println("Pole powierzchni trapezu: " + myTrapeze.calculateField(1.83, 5.5, 33));
+        System.out.println("Pole powierzchni trapezu: " + myTrapeze.calculateField(1.83, 5.5, 5));
 
 
     }
